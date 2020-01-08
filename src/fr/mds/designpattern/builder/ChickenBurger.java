@@ -5,5 +5,4 @@ public class ChickenBurger extends Burger {
 		this.name = "ChickenBurger";
 		this.price = 3;
 	}
-
 }
