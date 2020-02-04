@@ -8,19 +8,18 @@ import fr.mds.designpattern.abstractfactory.item.Item;
 
 public class ColorFactory extends AbstractFactory{
 	
-	public static final String COLOR = "COLOR";
 	Color c;
 	Item i;
 	
 	public Color getColor(String color) {
 		switch (color) {
-			case "RED":
+			case AllObjects.RED:
 				c = new Red();
 				break;
-			case "GREEN":
+			case AllObjects.GREEN:
 				c = new Green();
 				break;
-			case "BLUE":
+			case AllObjects.BLUE:
 				c = new Blue();
 				break;
 			default:
@@ -32,13 +31,13 @@ public class ColorFactory extends AbstractFactory{
 	
 	public Item getItem(String item) {
 		switch (item) {
-		case "RED":
+		case AllObjects.RED:
 			i = new Red();
 			break;
-		case "GREEN":
+		case AllObjects.GREEN:
 			i = new Green();
 			break;
-		case "BLUE":
+		case AllObjects.BLUE:
 			i = new Blue();
 			break;
 		default:

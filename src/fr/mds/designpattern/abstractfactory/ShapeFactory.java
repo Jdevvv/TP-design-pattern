@@ -7,19 +7,18 @@ import fr.mds.designpattern.abstractfactory.shape.Shape;
 import fr.mds.designpattern.abstractfactory.shape.Square;
 
 public class ShapeFactory extends AbstractFactory{
-	public static final String SHAPE = "SHAPE";
 	Shape s;
 	Item i;
 	
 	public Shape getShape(String shape) {
 		switch (shape) {
-			case "CIRCLE":
+			case AllObjects.CIRCLE:
 				s = new Circle();
 				break;
-			case "SQUARE":
+			case AllObjects.SQUARE:
 				s = new Square();
 				break;
-			case "RECTANGLE":
+			case AllObjects.RECTANGLE:
 				s = new Rectangle();
 				break;
 			default:
@@ -31,13 +30,13 @@ public class ShapeFactory extends AbstractFactory{
 	
 	public Item getItem(String item) {
 		switch (item) {
-		case "CIRCLE":
+		case AllObjects.CIRCLE:
 			i = new Circle();
 			break;
-		case "SQUARE":
+		case AllObjects.SQUARE:
 			i = new Square();
 			break;
-		case "RECTANGLE":
+		case AllObjects.RECTANGLE:
 			i = new Rectangle();
 			break;
 		default:
