@@ -1,23 +1,49 @@
 package fr.mds.designpattern.abstractfactory;
 
+import fr.mds.designpattern.abstractfactory.item.Item;
 import fr.mds.designpattern.abstractfactory.shape.Circle;
-import fr.mds.designpattern.abstractfactory.shape.Rectange;
+import fr.mds.designpattern.abstractfactory.shape.Rectangle;
 import fr.mds.designpattern.abstractfactory.shape.Shape;
 import fr.mds.designpattern.abstractfactory.shape.Square;
 
 public class ShapeFactory extends AbstractFactory{
 	public static final String SHAPE = "SHAPE";
+	Shape s;
+	Item i;
 	
 	public Shape getShape(String shape) {
 		switch (shape) {
 			case "CIRCLE":
-				return new Circle();
+				s = new Circle();
+				break;
 			case "SQUARE":
-				return new Square();
+				s = new Square();
+				break;
 			case "RECTANGLE":
-				return new Rectange();
+				s = new Rectangle();
+				break;
 			default:
-				return null;
+				s = null;
+				break;
 		}
+		return s;
+	}
+	
+	public Item getItem(String item) {
+		switch (item) {
+		case "CIRCLE":
+			i = new Circle();
+			break;
+		case "SQUARE":
+			i = new Square();
+			break;
+		case "RECTANGLE":
+			i = new Rectangle();
+			break;
+		default:
+			i = null;
+			break;
+		}
+		return i;
 	}
 }
